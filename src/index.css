@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TerraMesh Design System - Ocean-inspired environmental theme
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Ocean-inspired color palette */
+    --background: 220 25% 4%;
+    --foreground: 200 20% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 200 15% 92%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 200 15% 92%;
+
+    /* Ocean blue primary */
+    --primary: 195 85% 55%;
+    --primary-foreground: 220 25% 4%;
+    --primary-glow: 195 85% 65%;
+
+    /* Teal secondary */
+    --secondary: 180 65% 35%;
+    --secondary-foreground: 200 20% 95%;
+
+    /* Muted ocean grays */
+    --muted: 220 15% 15%;
+    --muted-foreground: 200 12% 65%;
+
+    /* Environmental accent */
+    --accent: 165 75% 45%;
+    --accent-foreground: 220 25% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 195 85% 55%;
+
+    /* Custom gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(195 85% 55%), hsl(180 65% 45%));
+    --gradient-depth: linear-gradient(180deg, hsl(220 25% 4%), hsl(220 20% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(195 85% 55% / 0.1), hsl(165 75% 45% / 0.1));
+    
+    /* Shadows */
+    --shadow-ocean: 0 10px 40px hsl(195 85% 55% / 0.3);
+    --shadow-glow: 0 0 30px hsl(195 85% 65% / 0.4);
+    --shadow-card: 0 8px 32px hsl(220 25% 4% / 0.5);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    /* Light mode ocean theme */
+    --background: 200 30% 98%;
+    --foreground: 220 25% 15%;
+    --card: 200 20% 96%;
+    --card-foreground: 220 25% 15%;
+    --primary: 195 85% 45%;
+    --primary-foreground: 200 30% 98%;
+    --secondary: 180 35% 85%;
+    --secondary-foreground: 220 25% 15%;
+    --muted: 200 15% 90%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 165 65% 55%;
+    --accent-foreground: 200 30% 98%;
+    --border: 200 20% 85%;
+    --input: 200 20% 92%;
+    --ring: 195 85% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
